@@ -1,8 +1,11 @@
 name: Semgrep
+# DISABLED: will be enabled when semgrep.dev subscription expires
+# To enable: replace workflow_dispatch with push trigger below
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch: {}
+  # push:
+  #   branches:
+  #     - master
 jobs:
   semgrep:
     uses: zeal-io/zeal-workflows/.github/workflows/semgrep.ci.yml@main
